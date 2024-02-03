@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test name="Test">
+    <classes>
+      <class name="com.testScripts.TC_002_AddToCart_Test"/>
+      <class name="com.testScripts.TC_003_RemoveFromCart_Test"/>
+      <class name="com.testScripts.TC_001_SearchTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.testScripts.TC_002_AddToCart_Test">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="loginToDWS"/>
+          <include name="logoutFromDWS"/>
+          <include name="addToCartTest"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.testScripts.TC_002_AddToCart_Test -->
+      <class name="com.testScripts.TC_003_RemoveFromCart_Test">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="removeFromCartTest"/>
+          <include name="loginToDWS"/>
+          <include name="logoutFromDWS"/>
+          <include name="addToCartTest"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.testScripts.TC_003_RemoveFromCart_Test -->
+      <class name="com.testScripts.TC_001_SearchTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="loginToDWS"/>
+          <include name="searchTest"/>
+          <include name="logoutFromDWS"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.testScripts.TC_001_SearchTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
